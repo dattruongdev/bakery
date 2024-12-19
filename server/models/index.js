@@ -1,21 +1,19 @@
 const Sequelize = require("sequelize");
 // const sequelize = new Sequelize(
-//   "mssql://sa:2@localhost/Bakery?TrustServerCertificate=true&encrypt=false&Trusted_Connection=true"
+//   "mssql://D1nn\\21522s/Bakery?encrypt=true&Trusted_Connection=true"
 // );
 //
-const sequelize = new Sequelize('Bakery', 'bakeryadmin', 'Hamili123', {
-  host: 'hamilidemo.database.windows.net',
-  dialect: 'mssql',
-  port: 1433,
-  trustServerCertificate: true,
-  // pool: {
-  //   max: 5,
-  //   min: 0,
-  //   idle: 10000
-  // },
-  dialectOptions: {
-    encrypt: true
-  }
+const sequelize = new Sequelize("bakery", "d1nn", "d1nn", {
+  host: "127.0.0.1",
+  dialect: "mysql",
+  port: 3306,
+  // trustServerCertificate: true,
+
+  pool: {
+    max: 5,
+    min: 0,
+    idle: 10000,
+  },
 });
 
 const db = {};
@@ -37,6 +35,5 @@ db.cakes.belongsTo(db.groups, {
 db.types.belongsTo(db.groups, {
   foreignKey: "group_id",
 });
-
 
 module.exports = db;

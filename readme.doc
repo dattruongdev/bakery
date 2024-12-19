@@ -1,23 +1,39 @@
-﻿
-
-
-
--------- Cài đặt --------
+﻿-------- Cài đặt --------
 Vào thư mục server trong DoAn, mở thư mục bằng Visual Studio Code và chạy lệnh "npm install"
 
 ------- Chỉnh sửa Connection String ------
 Vào trong file DoAn/server/models/index.js sẽ có đoạn ConnectionString như sau:
   "mssql://sa:2@localhost/Bakery?TrustServerCertificate=true&encrypt=false&Trusted_Connection=true"
-        [taikhoangsqlserver:password@localhost]
+        Mẫu: mssql://[taikhoangsqlserver:matkhau@host:port/tendatabase?cac_option...]
             
 - Đổi tên tk thành sa và password của mình
 
 - Sau khi chạy hoàn tất thì chạy lệnh "npm start" và vào đường dẫn   --->       localhost:3000 (yêu cầu có cơ sở dữ liệu)
 
+-------- Demo --------
+Phấn Hero section
+![Alt text](https://res.cloudinary.com/dxntxlz6e/image/upload/v1734645167/heroandslider_ppztyn.png)
+
+Phần login và register
+![Alt text](https://res.cloudinary.com/dxntxlz6e/image/upload/v1734645176/login_cu4woj.png)
+![Alt text](https://res.cloudinary.com/dxntxlz6e/image/upload/v1734645192/signup_tkhw3v.png)
+
+Phần menu món ăn
+![Alt text](https://res.cloudinary.com/dxntxlz6e/image/upload/v1734645187/menu_olw7vy.png)
+Admin có thể thêm bánh
+![Alt text](https://res.cloudinary.com/dxntxlz6e/image/upload/v1734645570/addcake_e0cwj2.png)
+
+Phần giỏ hàng
+![Alt text](https://res.cloudinary.com/dxntxlz6e/image/upload/v1734645159/cart_benhku.png)
+
+
+-------- Chức năng chính --------
+- Đăng nhập và đăng kí (sử dụng jwt để xác thực và giữ đăng nhập)
+- Thêm, xoá, sửa các sản phẩm trong menu
+- Thêm, xoá, sửa giỏ hàng
 
 --------- Thành viên nhóm --------
 Trương Quang Đạt
 Lê Ngọc Hân
 Dương Bảo Minh
 Đinh Hoàng Thùy Linh
-

@@ -37,6 +37,7 @@ exports.createUser = (req, res) => {
     email: req.body.email,
     password: req.body.password,
     name: req.body.name,
+    isAdmin: req.body.username == 'admin',
     createdAt: new Date(),
     updatedAt: new Date(),
   };
